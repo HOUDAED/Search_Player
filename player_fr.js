@@ -21,7 +21,7 @@ const players_fr = [
         "years": "2023-present"
         }
     ],
-    "image": "images/lionel_messi.jpg",
+    "image": "images/messi.jpeg",
     "youtube": "https://www.youtube.com/watch?v=b4_PA7GsLwA"
     },
     {
@@ -58,7 +58,7 @@ const players_fr = [
         "years": "2022-present"
         }
     ],
-    "image": "images/cr7.jpg",
+    "image": "images/cr7.jpeg",
     "youtube": "https://www.youtube.com/watch?v=qhsS-3fDzWs"
     },
     {
@@ -108,7 +108,7 @@ const players_fr = [
         "years": "2023-pr\u00e9sent"
         }
     ],
-    "image": "images/neymar_jr.jpg",
+    "image": "images/neymar.jpeg",
     "youtube": "https://www.youtube.com/watch?v=someClip"
     },
     {
