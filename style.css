@@ -241,11 +241,22 @@ body.dark-mode .search-bar-container select option {
     overflow: hidden;
     text-align: center;
     padding: 2.5rem 2rem;
-    max-width: 95%;
-    width: 100%;
+
+    /* 🔧 Largeur plus grande */
+    max-width: 1100px;
+    width: 95%;
     min-width: 300px;
     margin: 1.5rem auto;
 }
+
+/* Largeur accrue sur desktop */
+@media (min-width: 768px) {
+    .player-details {
+        width: 90%;
+        padding: 3rem 2.5rem;
+    }
+}
+
 
 /* Largeur accrue sur desktop */
 @media (min-width: 768px) {
@@ -255,6 +266,13 @@ body.dark-mode .search-bar-container select option {
     }
 }
 
+.player-details strong {
+    color: #1e3a8a; /* Bleu foncé par exemple */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
 .player-details:hover {
     transform: translateY(-8px) scale(1.03) rotateX(1deg);
     box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
@@ -262,15 +280,15 @@ body.dark-mode .search-bar-container select option {
 
 .player-details h2 {
     font-family: 'Poppins', sans-serif;
-    font-size: 28px;
-    color: #2c3e50;
+    font-size: 34px;
+    color: blueviolet;
     margin: 12px 0 5px;
     font-weight: 700;
 }
 
 .player-details h2 small {
-    font-size: 14px;
-    color: #7f8c8d;
+    font-size: 20px;
+    color: #17969f;
     display: block;
     margin-top: 4px;
 }
@@ -280,8 +298,9 @@ body.dark-mode .search-bar-container select option {
     color: #444;
     line-height: 1.6;
     margin: 8px 0;
-    font-size: 15px;
+    font-size: 18px;
     max-width: 90%;
+    text-align: justify;
 }
 
 .player-details img.player-image {
@@ -308,7 +327,7 @@ body.dark-mode .search-bar-container select option {
     color: white;
     padding: 4px 35px;
     transform: rotate(45deg);
-    font-size: 12px;
+    font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -326,6 +345,7 @@ body.dark-mode .search-bar-container select option {
 }
 
 
+
 /* ===== Section Heure ===== */
 #currentDate {
     font-size: 1.2rem;
@@ -335,26 +355,27 @@ body.dark-mode .search-bar-container select option {
     right: 40px;
     padding: 8px 15px;
     border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.3); /* Fond légèrement foncé pour contraster */
-    color: #fff; /* Texte blanc par défaut */
-    transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
+/* Mode clair : texte noir sur fond clair */
 body.light-mode #currentDate {
-    color: #000; /* Texte noir pour le mode clair */
-    background-color: rgba(255, 255, 255, 0.7); /* Fond plus clair pour mode clair */
+    color: #000;
+    background-color: #ffffff;
 }
 
+/* Mode sombre : texte blanc sur fond sombre */
 body.dark-mode #currentDate {
-    color: #fff; /* Texte en blanc pour le mode sombre */
-    background-color: rgba(255, 255, 255, 0.2); /* Fond légèrement transparent avec teinte claire */
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Effet au survol pour améliorer l'interaction */
+/* Effet au survol */
 #currentDate:hover {
-    background-color: rgba(0, 0, 0, 0.7); /* Fond plus sombre au survol */
-    transform: scale(1.1); /* Augmentation de la taille pour un effet plus prononcé */
-    cursor: pointer; /* Changer le curseur pour indiquer l'interaction */
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    cursor: pointer;
 }
+
 
 

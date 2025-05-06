@@ -38,7 +38,7 @@ function changeLanguage(lang) {
     currentLang = lang;
     players = lang === 'fr' ? players_fr : players_en;
 
-    document.getElementById("title").textContent = lang === 'fr' ? "Recherche de Joueurs" : "Player Search";
+    document.getElementById("title").textContent = lang === 'fr' ? "Portail Mondial des Joueurs" : "World Player Hub";
     document.getElementById("pageTitle").textContent = lang === 'fr' ? "Recherche de Joueurs" : "Player Search";
     document.getElementById("nameOption").textContent = lang === 'fr' ? "Nom" : "Name";
     document.getElementById("positionOption").textContent = lang === 'fr' ? "Poste" : "Position";
