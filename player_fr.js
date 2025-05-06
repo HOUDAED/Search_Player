@@ -973,18 +973,19 @@ const players_fr = [
         "youtube": "https://www.youtube.com/results?search_query=Arda+Güler+highlights"
     },
     {
-        "name": "Arda Barcola",
+        "name": "Bradley Barcola",
         "alias": "Barcola",
         "position": "Attaquant",
-        "team": "Bayern Munich",
-        "age": 17,
-        "nationality": "Allemand",
-        "history": "Né à Munich, Barcola rejoint le centre de formation bavarois en 2014, brille en U17 Bundesliga 2023, et débute en équipe première en avril 2024. Il se distingue par sa puissance physique et son sens du but. International U17 allemand, il totalise 8 buts en 12 sélections.",
+        "team": "Paris Saint-Germain",
+        "age": 22,
+        "nationality": "Française",
+        "history": "Bradley Barcola est un footballeur français né le 2 septembre 2002 à Villeurbanne, près de Lyon. Actuellement âgé de 22 ans, il évolue au Paris Saint-Germain (PSG) en tant qu'ailier gauche, portant le numéro 29. Formé à l'Olympique Lyonnais, Barcola a fait ses débuts professionnels en 2021 avec l'équipe première. Après deux saisons prometteuses, il rejoint le PSG en août 2023 pour un transfert d'environ 45 millions d'euros. Depuis son arrivée, il s'est imposé comme un élément clé de l'attaque parisienne, notamment après le départ de Kylian Mbappé.",
         "clubHistory": [
-        { "club": "Bayern Munich (jeunesse)", "years": "2014–2024" },
-        { "club": "Bayern Munich", "years": "2024–" }
+          { "club": "Olympique Lyonnais (jeunesse)", "years": "2014–2021" },
+          { "club": "Olympique Lyonnais", "years": "2021–2023" },
+          { "club": "Paris Saint-Germain", "years": "2023–" }
         ],
-        "image": "images/arda_barcola.jpg",
+        "image": "images/bradley_barcola.jpg",
         "youtube": "https://www.youtube.com/results?search_query=Arda+Barcola+highlights"
     },
     {

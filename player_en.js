@@ -1387,20 +1387,22 @@ const players_en = [
       "youtube": "https://www.youtube.com/results?search_query=Arda+Güler+highlights"
     },
     {
-      "name": "Arda Barcola",
-      "alias": "Barcola",
-      "position": "Forward",
-      "team": "Bayern Munich",
-      "age": 17,
-      "nationality": "German",
-      "history": "Born in Munich, Barcola joined Bayern’s youth in 2014, starred in U17 Bundesliga 2023, and debuted for first team in April 2024. Known for physicality and finishing. Represented Germany U17, scoring 8 goals in 12 caps.",
-      "clubHistory": [
-        { "club": "Bayern Munich (youth)", "years": "2014–2024" },
-        { "club": "Bayern Munich", "years": "2024–" }
-      ],
-      "image": "images/arda_barcola.jpg",
-      "youtube": "https://www.youtube.com/results?search_query=Arda+Barcola+highlights"
-    },
+        "name": "Bradley Barcola",
+        "alias": "Barcola",
+        "position": "Forward",
+        "team": "Paris Saint-Germain",
+        "age": 22,
+        "nationality": "French",
+        "history": "Bradley Barcola is a French footballer born on September 2, 2002, in Villeurbanne, near Lyon. Currently 22 years old, he plays for Paris Saint-Germain (PSG) as a left winger, wearing number 29. Trained at Olympique Lyonnais, Barcola made his professional debut in 2021 with the first team. After two promising seasons, he joined PSG in August 2023 for a transfer fee of around 45 million euros. Since his arrival, he has established himself as a key player in the Parisian attack, especially after the departure of Kylian Mbappé.",
+        "clubHistory": [
+          { "club": "Olympique Lyonnais (youth)", "years": "2014–2021" },
+          { "club": "Olympique Lyonnais", "years": "2021–2023" },
+          { "club": "Paris Saint-Germain", "years": "2023–" }
+        ],
+        "image": "images/bradley_barcola.jpg",
+        "youtube": "https://www.youtube.com/results?search_query=Arda+Barcola+highlights"
+      },
+      
     {
       "name": "Pablo Gavi García",
       "alias": "Gavi",
