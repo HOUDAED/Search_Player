@@ -1,0 +1,381 @@
+/* ===== Fond animé & Body ===== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1c1c1c, #3498db, #9b59b6);
+    background-size: 300% 300%;
+    animation: gradientShift 12s ease infinite;
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    overflow-y: auto;
+    transition: background 0.5s ease, color 0.5s ease;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* ===== Mode clair ===== */
+body.light-mode {
+    background: linear-gradient(135deg, #f0f0f0, #ffffff, #dcdcdc);
+    color: #000;
+}
+
+body.light-mode .container {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #000;
+}
+
+body.light-mode h1 {
+    color: #222;
+    text-shadow: none;
+}
+
+body.light-mode .mode-button {
+    border-color: #000;
+    color: #000;
+}
+
+body.light-mode .player-details {
+    background: #fff;
+    color: #000;
+}
+
+body.light-mode .search-bar-container input,
+body.light-mode .search-bar-container select {
+    background: rgba(0, 0, 0, 0.05);
+    color: #000;
+    border-color: #000;
+}
+
+body.light-mode .search-bar-container input::placeholder,
+body.light-mode .search-bar-container select {
+    color: #333;
+}
+
+body.light-mode .suggestion-item {
+    color: #000;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+body.light-mode .suggestion-item:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode .player-details h2 {
+    color: #222;
+}
+
+body.light-mode .player-details p {
+    color: #333;
+}
+
+/* ===== Conteneur principal ===== */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.6);
+}
+
+/* ===== Titre & Bouton de mode ===== */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); }
+    to { text-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
+}
+
+.mode-button {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.mode-button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* ===== Switch langues ===== */
+.language-switch {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.language-switch button {
+    background: rgba(0, 0, 0, 0.2);
+    border: none;
+    border-radius: 50%;
+    padding: 8px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.language-switch button:hover {
+    transform: scale(1.2);
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.language-switch img {
+    width: 32px;
+    height: auto;
+}
+
+/* ===== Barre de recherche & filtres ===== */
+
+.search-bar-container {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.search-bar-container input,
+.search-bar-container select {
+    padding: 12px 18px;
+    font-size: 16px;
+    border: 2px solid #fff;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    width: 100%;
+    color: #dcdcdc;
+    max-width: 250px;
+}
+
+body.dark-mode .search-bar-container select option {
+    background: rgba(255, 255, 255, 0.2);
+    color: #000;
+}
+
+.search-bar-container input::placeholder {
+    color: #eee;
+}
+
+.search-bar-container input:focus,
+.search-bar-container select:focus {
+    border-color: #ffd700;
+    outline: none;
+    box-shadow: 0 0 8px rgba(255, 215, 0, 0.8);
+}
+
+.search-bar-container button {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #ffd700;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar-container button:hover {
+    background: #ffecb3;
+    transform: scale(1.05);
+}
+
+/* ===== Suggestions de recherche ===== */
+#suggestions {
+    max-width: 550px;
+    margin: 0 auto 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow-y: auto;
+    max-height: 150px;
+}
+
+.suggestion-item {
+    padding: 10px 15px;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.suggestion-item:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+
+.player-details {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease both;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 2.5rem 2rem;
+
+    /* 🔧 Largeur plus grande */
+    max-width: 1100px;
+    width: 95%;
+    min-width: 300px;
+    margin: 1.5rem auto;
+}
+
+/* Largeur accrue sur desktop */
+@media (min-width: 768px) {
+    .player-details {
+        width: 90%;
+        padding: 3rem 2.5rem;
+    }
+}
+
+
+/* Largeur accrue sur desktop */
+@media (min-width: 768px) {
+    .player-details {
+        width: 400px;
+        padding: 3rem 2.5rem;
+    }
+}
+
+.player-details strong {
+    color: #1e3a8a; /* Bleu foncé par exemple */
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.player-details:hover {
+    transform: translateY(-8px) scale(1.03) rotateX(1deg);
+    box-shadow: 0 16px 50px rgba(0, 0, 0, 0.15);
+}
+
+.player-details h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 34px;
+    color: blueviolet;
+    margin: 12px 0 5px;
+    font-weight: 700;
+}
+
+.player-details h2 small {
+    font-size: 20px;
+    color: #17969f;
+    display: block;
+    margin-top: 4px;
+}
+
+.player-details p {
+    font-family: 'Roboto', sans-serif;
+    color: #444;
+    line-height: 1.6;
+    margin: 8px 0;
+    font-size: 18px;
+    max-width: 90%;
+    text-align: justify;
+}
+
+.player-details img.player-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #ffffff;
+    margin: 20px 0;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.player-details img.player-image:hover {
+    transform: scale(1.05);
+}
+
+.player-details::before {
+    content: "⭐ Star";
+    position: absolute;
+    top: 10px;
+    right: -45px;
+    background: #f39c12;
+    color: white;
+    padding: 4px 35px;
+    transform: rotate(45deg);
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* ===== Section Heure ===== */
+#currentDate {
+    font-size: 1.2rem;
+    font-weight: bold;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    padding: 8px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+/* Mode clair : texte noir sur fond clair */
+body.light-mode #currentDate {
+    color: #000;
+    background-color: #ffffff;
+}
+
+/* Mode sombre : texte blanc sur fond sombre */
+body.dark-mode #currentDate {
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Effet au survol */
+#currentDate:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
+

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="pageTitle">Recherche de Joueurs</title>
+<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+
+<div class="container">
+
+<!-- Titre et Mode -->
+<div style="display: flex; justify-content: space-between; align-items: center;">
+    <h1 id="title">Portail Mondial des Joueurs </h1>
+    <button id="themeButton" class="mode-button" title="Changer le thème">🌙</button>
+</div>
+
+<!-- Changement de langue -->
+<div class="language-switch">
+    <button id="langFr" onclick="changeLanguage('fr')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Flag_of_France.svg" alt="Français" />
+    </button>
+    <button id="langEn" onclick="changeLanguage('en')">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Flag_of_the_United_States.svg" alt="English" />
+    </button>
+</div>
+
+<!-- affichage de la date -->
+
+<div id="currentDate" ></div>
+<!-- Barre de recherche et filtres -->
+<div class="search-bar-container">
+
+    <select id="searchCriteria">
+        <option value="name" id="nameOption">Nom</option>
+        <option value="position" id="positionOption">Poste</option>
+        <option value="team" id="teamOption">Équipe</option>
+    </select>
+    <input
+    type="text"
+    id="searchInput"
+    class="search-bar"
+    placeholder="Tapez ici pour rechercher..."
+    oninput="suggestSearch()"
+    />
+    <button id="searchButton" onclick="performSearch()">🔍 Rechercher</button>
+</div>
+
+<!-- Suggestions dynamiques -->
+<div id="suggestions"></div>
+
+<!-- Résultats -->
+<div class="results-container" id="playerResult"></div>
+
+</div>
+
+<!-- Données des joueurs -->
+<script src="player_fr.js"></script>
+<script src="player_en.js"></script>
+<!-- Script principal -->
+<script src="script.js"></script>
+</body>
+</html>
